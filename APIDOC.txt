@@ -1,0 +1,97 @@
+schema : User
+
+attributes : username,password,email,first_name,last_name
+
+
+1)Api for creating a new user account
+
+    url : http://127.0.0.1:8000/api/register/
+
+    method : post
+
+    body : {username,password,email,first_name,last_name}
+
+    Authentication : nill
+
+    status : Completed
+
+2)Api for fetching token
+
+    url : http://127.0.0.1:8000/api/token/
+
+    method : post
+
+    body : (username,password):
+
+    Authentication : nill
+
+    status : Completed
+
+==========================================END AUTH============================================
+
+
+schema : Expence
+
+attributes : title,amount,category,priority,owner
+
+
+1)Api for listing all Expenses
+    
+    url : http://127.0.0.1:8000/api/expenses/
+
+    method : get
+
+    body : nill
+
+    Authentication : TokenAuthentication
+
+    status : Completed
+
+
+2) Api for adding Expenses
+
+    url : http://127.0.0.1:8000/api/expenses/
+
+    method : post
+
+    body : {title,amount,category,priority}
+
+    Authentication : TokenAuthentication
+
+    status : Completed
+
+
+3) Api for updating Expenses
+
+    url : http://127.0.0.1:8000/api/expenses/{id}
+
+    method : put
+
+    body : {title,amount,category,priority}
+
+    Authentication : TokenAuthentication
+
+    status : Completed
+
+
+4) Api for delete Expenses
+
+    url : http://127.0.0.1:8000/api/expenses/{id}
+
+    method : delete
+
+    body : {title,amount,category,priority}
+
+    Authentication : TokenAuthentication
+
+    status : Completed
+
+
+
+coding standard
+
+PascalCase (class name) ObtainAuthToken
+
+snake_case (method,function) get_token()
+
+camelCase
